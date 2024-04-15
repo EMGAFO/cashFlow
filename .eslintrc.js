@@ -14,5 +14,8 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+
+    // Deshabilitar la regla vue/multi-word-component-names
+    "vue/multi-word-component-names": "off",
   },
 };

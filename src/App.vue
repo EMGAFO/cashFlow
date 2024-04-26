@@ -4,7 +4,7 @@
       <Home />
     </template>
     <template #fallback>
-      <splashScreen></splashScreen>
+      <SplashScreen />
     </template>
   </Suspense>
 </template>
@@ -18,11 +18,11 @@ export default {
     SplashScreen,
     Home: defineAsyncComponent(
       () =>
-        new Promise((resolve) => {
+        new Promise(resolve => {
           setTimeout(() => {
             resolve(import("./components/Home.vue"));
           }, 2500);
-        })
+        }),
     ),
   },
 };
@@ -36,6 +36,7 @@ body,
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 * {
   --brand-green: #04b500;
   --brand-blue: #0689b0;
